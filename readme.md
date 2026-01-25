@@ -10,13 +10,9 @@ This package provides a small but extensible tween framework designed for UI and
 
 The system is intentionally straightforward and does **not** try to implement full-featured tween library. Instead, it focuses on clarity, determinism, and tight integration into code-driven projects providing extenable skeleton for tween-like animation.  
 
----
-
 ## Compatibility
 
 This package has been implemented and tested with **Unity v6000.0** and **Universal Render Pipeline v17.0.4**.
-
----
 
 ## Features
 
@@ -30,8 +26,6 @@ This package has been implemented and tested with **Unity v6000.0** and **Univer
   - Local scale
   - Material float mutation
   - Delayed trigger (timer-only tween)
-
----
 
 ## Installation (UPM)
 
@@ -52,8 +46,6 @@ Or you can add this repository directly as a Git package:
 3. Paste:  
    `https://github.com/hessuressu/unity-tween-controller.git`
 
----
-
 ## Basic Concept
 
 A **TweenBinding** represents a single running tween instance.
@@ -68,8 +60,6 @@ Instead, you request them from the controller:
 ```csharp
 var tween = TweenController.Instance.Get<CanvasGroupAlphaTweenBinding>();
 ```
-
----
 
 ## Minimal Usage Example
 
@@ -94,8 +84,6 @@ tween.onComplete = () =>
 };
 ```
 
----
-
 ## Cancel Tweens
 
 Cancel all tweens targeting a specific object:
@@ -110,8 +98,6 @@ Optionally suppress completion callbacks:
 TweenController.Instance.Cancel(canvasGroup, invokeOnComplete: false);
 ```
 
----
-
 ## Built-in Tween Bindings
 
 ### CanvasGroupAlphaTweenBinding
@@ -121,16 +107,12 @@ Context fields used:
 - `BaseValue`
 - `TargetValue`
 
----
-
 ### ColorTweenBinding
 Interpolates `Graphic.color`.
 
 Context fields used:
 - `BaseColor`
 - `TargetColor`
-
----
 
 ### ScaleTweenBinding
 Interpolates `GameObject.transform.localScale`.
@@ -140,8 +122,6 @@ Context fields used:
 - `TargetScale`
 - `Influence` (per-axis weight 0..1)
 
----
-
 ### MaterialMutationTweenBinding
 Interpolates a float shader parameter on a UI Image material.
 
@@ -150,15 +130,11 @@ Context fields used:
 - `BaseValue`
 - `TargetValue`
 
----
-
 ### DelayedTriggerTweenBinding
 Timer-only tween. Does not mutate target.
 Useful as a delayed callback.
 
 Context fields used: none
-
----
 
 ## Creating Custom Tween Bindings
 
@@ -196,8 +172,6 @@ Then request it normally:
 var tween = TweenController.Instance.Get<MyCustomTween>();
 ```
 
----
-
 ## Architecture Overview
 
 ```
@@ -217,8 +191,6 @@ Design goals:
 - Clear ownership
 - Easy to debug
 
----
-
 ## Performance Characteristics
 
 - No GC allocations during normal tween usage
@@ -226,8 +198,6 @@ Design goals:
 - Pool reuse avoids churn
 
 Suitable for UI-heavy projects and utility animations.
-
----
 
 ## Limitations (By Design)
 
@@ -238,18 +208,12 @@ Suitable for UI-heavy projects and utility animations.
 
 This keeps the system predictable and small.
 
----
-
 ## Testing
 Includes EditMode unit tests using Unity Test Framework.
-
----
 
 ## Additional Notes
 
 If you want additional helpers (easing library, chaining, sequences, etc.), they can be layered on top without changing the core architecture.
-
----
 
 ## License
 
