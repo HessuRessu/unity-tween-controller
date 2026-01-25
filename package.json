@@ -1,0 +1,12 @@
+{
+  "name": "com.pihkura.unity-tween-controller",
+  "version": "1.0.0",
+  "displayName": "Tween Controller",
+  "description": "Lightweight baseline tween controller skeleton for Unity.",
+  "unity": "6000.0",
+  "keywords": ["tween", "animation", "ui", "utility", "controller"],
+  "author": {
+    "name": "Hessu",
+    "email": "hessu81@outlook.com"
+  }
+}

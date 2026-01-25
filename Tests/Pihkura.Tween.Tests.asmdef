@@ -1,0 +1,12 @@
+{
+  "name": "Pihkura.Tween.Tests",
+  "references": [
+    "Pihkura.Tween"
+  ],
+  "includePlatforms": [
+    "Editor"
+  ],
+  "optionalUnityReferences": [
+    "TestAssemblies"
+  ]
+}
