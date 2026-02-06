@@ -130,6 +130,19 @@ Context fields used:
 - `BaseValue`
 - `TargetValue`
 
+### LineRendererAlphaTweenBinding
+Interpolates the alpha channel of a LineRenderer's color gradient over time.
+
+Common use cases:
+- Fade-in / fade-out of paths and roads
+- Territory or zone border highlighting
+- Selection outlines
+- Any procedural line-based visual that requires smooth alpha animation
+
+Context fields used:
+- `BaseValue` (starting alpha)
+- `TargetValue` (final alpha)
+
 ### DelayedTriggerTweenBinding
 Timer-only tween. Does not mutate target.
 Useful as a delayed callback.
