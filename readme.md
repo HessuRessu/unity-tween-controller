@@ -2,7 +2,7 @@
 
 Lightweight, allocation-friendly tweening baseline for Unity.
 
-This package provides a small but extensible tween framework designed for UI and gameplay utilities where:
+This package provides a small but extensible tween system designed for UI and gameplay utilities where:
 - Simplicity is preferred over large feature sets
 - GC allocations must be avoided
 - Tweens are driven from a central controller
